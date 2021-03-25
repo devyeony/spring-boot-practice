@@ -12,22 +12,13 @@ import com.example.demo.dto.Member;
 import com.example.demo.service.MemberService;
 
 @RestController
+@RequestMapping("member")
 public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
-	@RequestMapping(value="/")
-    public String sampleHome() {
-        return "Hello Spring Boot!";
-    }
-	
 	@GetMapping("/all")
-	public List<Member> all() throws Exception { //query String으로 county를 받도록 설정
+	public List<Member> all() throws Exception { 
 		return memberService.getAllMember();
-	}
-	
-	@GetMapping("/test")
-	public String test() {
-		return "안녕";
 	}
 }
