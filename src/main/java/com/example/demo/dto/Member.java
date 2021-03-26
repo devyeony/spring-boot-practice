@@ -1,7 +1,18 @@
 package com.example.demo.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="member")
 public class Member {
+	@Id
+	@Column(name="no")
 	private int no;
+	
+	@Column(name="name")
 	private String name;
 	
 	public Member() {}

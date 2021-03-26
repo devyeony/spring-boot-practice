@@ -17,8 +17,13 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
-	@GetMapping("/all")
-	public List<Member> all() throws Exception { 
-		return memberService.getAllMember();
+	@GetMapping("/myBatis/all")
+	public List<Member> allByMyBatis() throws Exception { 
+		return memberService.getAllMemberByMyBatis();
+	}
+	
+	@GetMapping("/jpa/all")
+	public List<Member> allByJpa() throws Exception { 
+		return memberService.getAllMemberByJpa();
 	}
 }

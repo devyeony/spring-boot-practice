@@ -9,6 +9,6 @@ import com.example.demo.dto.Member;
 
 @Repository
 @Mapper
-public interface MemberDao {
+public interface MemberMapper {
 	public List<Member> getAllMember() throws Exception;
 }
